@@ -152,3 +152,28 @@ function countVowels(stri){
     }
 
     console.log(fibonachi(5));
+
+
+    // 9 //
+
+    function almostEqual(a, b, epsilon = 1e-10){
+             return Math.abs(a - b) < epsilon;           
+
+    }
+
+    console.log(almostEqual(0.1 + 0.2, 0.3));
+
+    // 10 //
+
+    function toNumberORNaN(a){
+
+        let num = Number(a);
+        if(Number.isNaN(num)){
+            return null;
+        }
+
+        return  num;
+    }
+
+    console.log(toNumberORNaN(NaN));
+    console.log(toNumberORNaN("42"));
