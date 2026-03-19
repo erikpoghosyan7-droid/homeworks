@@ -177,3 +177,56 @@ function countVowels(stri){
 
     console.log(toNumberORNaN(NaN));
     console.log(toNumberORNaN("42"));
+
+    // 11 //
+
+    function exactType(value){
+
+        if(value === null){
+            return "null";
+        }
+        if(Array.isArray(value)){
+            return "array";
+        }
+
+        return typeof value;
+    }
+
+    console.log(exactType(null));
+    console.log(exactType([1,2]));
+    console.log(exactType(undefined));
+
+    // 12 //
+
+    function toBoolean(val){
+        return !!val;
+    }
+
+     
+    console.log(toBoolean([1,2,2]));
+    console.log(toBoolean(null));
+    console.log(toBoolean(""));
+
+    // 13 //
+
+    function isPrimitive(value){
+        if (value === null || (typeof value !== "object" && typeof value !== "function")){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    console.log(isPrimitive(null));
+    console.log(isPrimitive(15));
+    console.log(isPrimitive([1,2]));
+
+    //14 //
+
+    function isArray(val){
+        return Array.isArray(val);
+    }
+
+    console.log(isArray(null));
+    console.log(isArray([{1:5}]));
+    console.log(isArray([]));
